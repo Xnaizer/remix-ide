@@ -1,0 +1,236 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "nim",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "nama",
+						"type": "string"
+					}
+				],
+				"name": "MahasiswaEnrolled",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "nim",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "nilai",
+						"type": "uint256"
+					}
+				],
+				"name": "NilaiAdded",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_nim",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint8",
+						"name": "_NilaiBaru",
+						"type": "uint8"
+					}
+				],
+				"name": "addGrade",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "authorized",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "daftarNIM",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_nama",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_jurusan",
+						"type": "string"
+					}
+				],
+				"name": "enrollment",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_nim",
+						"type": "uint256"
+					}
+				],
+				"name": "getStudent",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "nama",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "nim",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "jurusan",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "nilai",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "bool",
+						"name": "isActive",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "mahasiswa",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "nama",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "nim",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "jurusan",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "isActive",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/SistemAkademik.sol": "SistemAkademik"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/SistemAkademik.sol": {
+			"keccak256": "0xdaa578c60e2c8021311e354a06fa41ed5d28a7076b6f50c059e13b966b303f04",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5050bbdd995e7914af582b5d101f8a27e3e65c288b7cf6b7f75e1bd8e4a9ea24",
+				"dweb:/ipfs/QmPrV2WRMpS9LwmACyv7wwx7bmdpux6e2pDdXUqoxw9geD"
+			]
+		}
+	},
+	"version": 1
+}
