@@ -18,7 +18,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/SampleFallback.sol": "SampleContract"
+			"contracts/SampleFallback.sol": "SampleFallbac"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -33,11 +33,11 @@
 	},
 	"sources": {
 		"contracts/SampleFallback.sol": {
-			"keccak256": "0x5b6eb8519a17ec0763c911ef646f7ee2e17228a581a2bf5e64e838d3d3fefd03",
+			"keccak256": "0x670d0aa8827fe0851d0b858da516b762c919f6bc5ec6de2dda205af3cda0ca78",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://ee0c2254ef43030ce3e481732a25ab4926a1ab29b57a7403a20b249f0049291a",
-				"dweb:/ipfs/QmXCkcVoQroW5VwkMGvVJNcVUjGcTFTCMGh5qURT3koy4f"
+				"bzz-raw://9ee71a749630304887e06c0c372eedf2660733fafac9aac5690c33a10933bc35",
+				"dweb:/ipfs/QmR8E3uE3C7xxH3eYmoXUWWuPZXksXfv3GooKozucq5hwo"
 			]
 		}
 	},
