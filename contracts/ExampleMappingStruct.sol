@@ -1,7 +1,8 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.15;
+pragma solidity ^0.8.15;
 
-contract MappingStructExample {
+contract ExampleMappingStruct {
+
     struct Transaction {
         uint amount;
         uint timestamp;
@@ -11,38 +12,38 @@ contract MappingStructExample {
         uint totalBalance;
         uint numDeposits;
         mapping(uint => Transaction) deposits;
+        // mapping(uint => Transaction) public  deposits; // ini akan eror karna tidak bisa mengakses function view jika didalam struct
         uint numWithdrawals;
-        mapping(uint => Transaction) withdrawals;
+        mapping(uint => Transaction) withdrawal;
     }
 
-    mapping(address => Balance) public balances;
+    mapping(address => Balance) public  balances; // tambahkan public untuk dapat melihat functio supaya bisa dipanggil
 
-    function depositMoney() public payable {
+    function DepositMoney () public payable {
         balances[msg.sender].totalBalance += msg.value;
 
-        // Transaction memory deposit = Transaction(msg.value, block.timestamp);
-        // balances[msg.sender].deposits[balances[msg.sender].numDeposits] = deposit;
-        balances[msg.sender].deposits[balances[msg.sender].numDeposits] = Transaction( msg.value, block.timestamp); // alternatif yang lain
+        balances[msg.sender].deposits[balances[msg.sender].numDeposits] = Transaction(msg.value, block.timestamp);
         balances[msg.sender].numDeposits++;
     }
 
-    function withdrawMoney (address payable _to, uint _amount) public {
+    function WithdrawMoney (uint _amount, address payable _to) public {
         balances[msg.sender].totalBalance -= _amount;
-
-        Transaction memory witdraw = Transaction(_amount, block.timestamp);
-        balances[msg.sender].withdrawals[balances[msg.sender].numWithdrawals] = witdraw;
+        
+        Transaction memory withdraw = Transaction(_amount, block.timestamp);
+        balances[msg.sender].withdrawal[balances[msg.sender].numWithdrawals] = withdraw;
+        // balances[msg.sender].withdrawal[balances[msg.sender].numWithdrawals] = Transaction(_amount,block.timestamp); // alternatif
         balances[msg.sender].numWithdrawals++;
-
-
-
         _to.transfer(_amount);
     }
 
-    function accessDeposits(uint _index ) public view returns (Transaction memory) {
+    function viewDeposits(uint _index) public view returns(Transaction memory) {
         return balances[msg.sender].deposits[_index];
     }
 
-    function accessWithdrawals(uint _index) public view returns (Transaction memory) {
-        return balances[msg.sender].withdrawals[_index];
+    function viewWithdrawals(uint _index) public view returns(Transaction memory) {
+        return balances[msg.sender].withdrawal[_index];
     }
+
+
+    // karna menggunakan mapping kita tak akan pernah tahu berapa length dari mapping tersebut untuk mengetahui jumlah data, digunakanlah alternatif dengan menggunakan variable lain untuk menghitung seperti numDeposits dan numWithdrawals lalu nantinya setiap function dipanggil akan mengambahkan 1 setiap kali dipanggil seperti balances[msg.sender].numDeposits++;
 }

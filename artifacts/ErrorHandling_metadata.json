@@ -1,0 +1,53 @@
+{
+	"compiler": {
+		"version": "0.8.15+commit.e14f2714"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "catchTheError",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/ExampleTryCatch.sol": "ErrorHandling"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/ExampleTryCatch.sol": {
+			"keccak256": "0xe9f6bf32e6be827e20ee7880e45cb1de21cfef24ebc5be741942fdea51e764bd",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a6f00b57f2db843c6595e72a9d8e01b7d9ab38aca6c698b1753aac687757d40e",
+				"dweb:/ipfs/QmUQSeJr8yQBpNnmgAx8PTwA3FEPPmYZieMwfbCV46cdpQ"
+			]
+		}
+	},
+	"version": 1
+}
